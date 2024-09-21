@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Listing</title>
+    <link rel="stylesheet" href="CreateListing.css">
+</head>
+<body>
+    <div class="header">
+        <a href="../Dashboard/Dashboard.html" class="header-link">Dashboard</a>
+        <a href="Messages.html" class="header-link">Messages</a>
+        <a href="Profile.html" class="profile-circle"></a>
+    </div>
+
+    <div class="content">
+        <h1>Create a Task Listing</h1>
+
+        <!-- Create Listing Form -->
+        <form id="listingForm">
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Enter task description..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price ($):</label>
+                <input type="number" id="price" placeholder="Enter price" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tags">Tags (comma-separated):</label>
+                <input type="text" id="tags" placeholder="Enter tags, e.g., cleaning, urgent" required>
+            </div>
+
+            <button type="submit">Create Listing</button>
+        </form>
+
+        <!-- Display Created Listing -->
+        <div id="listingOutput">
+            <h2>Created Listing:</h2>
+            <p id="outputDescription"></p>
+            <p id="outputPrice"></p>
+            <p id="outputTags"></p>
+        </div>
+    </div>
+
+    <script src="CreateListing.js"></script>
+</body>
+</html>
