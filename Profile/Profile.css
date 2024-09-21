@@ -56,3 +56,17 @@ body {
     font-size: 18px;
     text-align: center;
 }
+
+/* Task input boxes */
+.task-box {
+    width: 100%;            /* Take full width of the parent */
+    max-width: 600px;        /* Limit maximum width for larger screens */
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+}
