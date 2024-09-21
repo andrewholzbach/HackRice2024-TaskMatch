@@ -6,14 +6,12 @@
     <title>Task Match Dashboard</title>
     <link rel="stylesheet" href="Dashboard.css">
     <style>
-        /* Improved styling for better appearance */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-
         .header {
             display: flex;
             align-items: center;
@@ -22,63 +20,53 @@
             padding: 10px 20px;
             color: white;
         }
-
         .app-name {
             font-size: 24px;
             font-weight: bold;
             margin-right: 30px;
         }
-
         .header-link {
-            margin-right: 15px; /* Brings the links closer */
+            margin-right: 15px;
             color: white;
             text-decoration: none;
             font-weight: 500;
         }
-
         .header-link:hover {
             text-decoration: underline;
         }
-
         .profile-section {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .search-section {
             display: flex;
             justify-content: center;
             margin: 30px 0;
         }
-
         .search-bar {
-            width: 400px; /* Increased the size of the search bar */
+            width: 400px;
             height: 40px;
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
         }
-
         .dropdowns {
             display: flex;
             justify-content: center;
-            margin-top: 15px; /* Adjusted margin for spacing */
+            margin-top: 15px;
         }
-
         .dropdowns select {
             margin-right: 10px;
             padding: 8px;
             font-size: 14px;
         }
-
         .main-section {
             display: flex;
             justify-content: center;
             margin: 20px;
         }
-
         .large-box {
             width: 45%;
             height: 300px;
@@ -87,7 +75,6 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
         .username {
             color: white;
             margin-top: 5px;
@@ -96,16 +83,16 @@
 </head>
 <body>
     <div class="header">
-        <span class="app-name">Task Match</span> <!-- Added app name -->
+        <span class="app-name">Task Match</span>
         <div class="header-links">
             <a href="CreateListing.html" class="header-link">Create a Task</a>
             <a href="MyTasks.html" class="header-link">My tasks</a>
             <a href="MyFavors.html" class="header-link">My favors</a>
             <a href="Messages.html" class="header-link">Messages</a>
         </div>
-        <div class="profile-section"> <!-- Profile section for the username and profile picture -->
-            <a href="Profile.html" class="profile-circle"></a>
-            <span class="username">Your Name</span> <!-- Placeholder for the username -->
+        <div class="profile-section">
+            <a href="Profile.html" class="profile-circle"></a> <!-- Profile page link -->
+            <span class="username">Your Name</span>
         </div>
     </div>
 
@@ -113,8 +100,7 @@
         <div class="search-section">
             <input type="text" class="search-bar" placeholder="Search for your task">
         </div>
-
-        <div class="dropdowns"> <!-- Dropdowns centered directly below the search bar -->
+        <div class="dropdowns">
             <select>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
