@@ -31,6 +31,8 @@ app.post('/create-listing', (req, res) => {
     // Store listing (In a real app, this would be saved to a database)
     listings.push(newListing);
 
+    console.log(`New listing with description: ${description}`)
+
     // Send response back to the client
     res.status(201).json({ message: 'Listing created successfully!', listing: newListing });
 });
