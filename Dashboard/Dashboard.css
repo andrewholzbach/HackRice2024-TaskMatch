@@ -78,17 +78,60 @@ body {
     border-radius: 5px;
 }
 
-/* Main section */
+/* Main section for tasks */
 .main-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    margin: 20px;
     padding: 20px;
+    width: 100%; /* Ensure the main section takes full width */
 }
 
-.large-box {
-    width: 100%;
-    height: 200px;
+/* Task input boxes */
+.task-box {
+    width: 100%;            /* Take full width of the parent */
+    max-width: 600px;        /* Limit maximum width for larger screens */
+    padding: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+}
+
+.task-box input,
+.task-box textarea {
+    width: 100%;            /* Full width inside the task box */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+}
+
+.task-box textarea {
+    resize: none;            /* Prevents resizing */
+}
+
+/* Button styling */
+.message-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;             /* Full width inside the task box */
+    max-width: 200px;        /* Limit button width */
+    margin: 0 auto;          /* Center the button */
+}
+
+.message-button:hover {
+    background-color: #555;
 }
