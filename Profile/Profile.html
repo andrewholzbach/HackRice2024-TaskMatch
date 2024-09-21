@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="Profile.css"> <!-- Linked the CSS file -->
 </head>
 <body>
+    <div class="header">
+        <link rel="stylesheet" href="Header.css">
+        <span class="app-name">Task Match</span>
+        <div class="header-links">
+            <a href="../Dashboard/Dashboard.html" class="header-link">Dashboard</a>
+            <a href="../CreateListing/CreateListing.html" class="header-link">Create a Task</a>
+            <a href="Messages.html" class="header-link">Messages</a>
+        </div>
+        <div class="profile-section">
+            <a href="../Profile/Profile.html" class="profile-circle"></a>
+            <span class="username">Your Name</span>
+        </div>
+    </div>
 
     <div class="profile-container">
         <div class="profile-picture"></div>
@@ -34,3 +47,15 @@
 
 </body>
 </html>
+
+<!-- loads the header -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('../Header/Header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
