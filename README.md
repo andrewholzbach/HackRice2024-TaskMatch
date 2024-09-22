@@ -8,7 +8,7 @@ Task Match is a web application that allows users to create and manage task list
 ## Features
 - User authentication (create accounts and log in)
 - Create, read, and delete task listings
-- Upload and display profile pictures
+- Display profile pictures
 - Dynamic dashboard for managing tasks
 - Responsive design
 
@@ -17,3 +17,4 @@ Task Match is a web application that allows users to create and manage task list
 - **Backend:** Node.js, Express
 - **Database:** SQLite
 - **Version Control:** Git
+
