@@ -36,3 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('listings-container').innerHTML = '<p class="no-listings">Error loading tasks.</p>';
         });
 });
+
+// This should be in your script file that's loaded on each page
+// window.onload = function() {
+//     const isLoggedIn = localStorage.getItem('isLoggedIn');
+//     const usernameElement = document.querySelector('.username'); // Select the element to display the username
+
+//     if (isLoggedIn) {
+//         const email = localStorage.getItem('userEmail');
+//         usernameElement.textContent = email; // Set the profile display to the user's email
+//     } else {
+//         usernameElement.textContent = 'Guest'; // Default display if not logged in
+//         // Optionally, you can redirect to a login page
+//     }
+// };
