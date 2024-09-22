@@ -58,10 +58,9 @@ body {
     text-align: center;
 }
 
-/* Task input boxes */
 .task-box {
-    width: 100%;            /* Take full width of the parent */
-    max-width: 600px;        /* Limit maximum width for larger screens */
+    width: 100%;            
+    max-width: 600px;        
     padding: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
@@ -69,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-sizing: border-box;  /* Ensures padding is included in width */
+    box-sizing: border-box; 
 }
 
 body {
@@ -144,4 +143,13 @@ body {
 .username {
     color: white;
     margin-top: 5px;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
 }
