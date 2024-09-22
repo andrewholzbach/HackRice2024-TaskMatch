@@ -9,8 +9,9 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
 
     // Create a new listing object
     const listingData = {
-        name: "example",
+        user: "example-user",
         description: description,
+        title: "example-title",
         price: price,
         tags: tags
     };

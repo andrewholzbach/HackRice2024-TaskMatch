@@ -28,30 +28,32 @@ const db = new sqlite3.Database('./listings.db', (err) => {
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `);
-        db.run(`
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                email TEXT UNIQUE,
-                password TEXT
-            )
-        `);
         
     }
 });
 
+
+   // db.run(`
+        //     CREATE TABLE IF NOT EXISTS users (
+        //         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        //         email TEXT UNIQUE,
+        //         password TEXT
+        //     )
+        // `);
+
 // Route to handle POST requests for creating a listing
 app.post('/create-listing', (req, res) => {
     console.log("Listing created")
-    const { name, description, price, tags } = req.body;
+    const { user, description, title, price, tags } = req.body;
 
-    if (!name || !description || !price || !tags) {
+    if (!user || !description || !price || !tags) {
         return res.status(400).json({ error: 'Please provide all fields.' });
     }
 
     db.run(
         `INSERT INTO listings (user, description, title, price, tags, created_at) VALUES (?, ?, ?, ?, ?, ?)`,
-        [name, description, price, tags, new Date().toISOString()], // Adding the current time
-        function (err) {
+        [user, description, title, price, tags, new Date().toISOString()], // Adding the current time
+        function (err) {   
             if (err) {
                 return res.status(500).json({ error: 'Database error' });
             }
