@@ -99,7 +99,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Fixed header */
 .header {
     position: fixed;
     top: 0;
@@ -124,7 +123,6 @@ body {
     border-radius: 5px;
 }
 
-/* Profile circle */
 .profile-circle {
     width: 40px;
     height: 40px;
@@ -134,14 +132,12 @@ body {
     cursor: pointer;
 }
 
-/* Content section (scrollable) */
 .content {
     padding-top: 60px;
     overflow-y: auto;
     height: 100vh;
 }
 
-/* Search section */
 .search-section {
     display: flex;
     justify-content: center;
@@ -168,7 +164,6 @@ body {
     border-radius: 5px;
 }
 
-/* Main section for tasks */
 .main-section {
     display: flex;
     flex-direction: column;
@@ -176,13 +171,13 @@ body {
     gap: 20px;
     margin: 20px;
     padding: 20px;
-    width: 100%; /* Ensure the main section takes full width */
+    width: 100%;
 }
 
 /* Task input boxes */
 .task-box {
-    width: 100%;            /* Take full width of the parent */
-    max-width: 600px;        /* Limit maximum width for larger screens */
+    width: 100%;            
+    max-width: 600px;        
     padding: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
@@ -190,21 +185,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-sizing: border-box;  /* Ensures padding is included in width */
+    box-sizing: border-box;  
 }
 
 .task-box input,
 .task-box textarea {
-    width: 100%;            /* Full width inside the task box */
+    width: 100%;           
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box;  /* Ensures padding is included in width */
+    box-sizing: border-box; 
 }
 
 .task-box textarea {
-    resize: none;            /* Prevents resizing */
+    resize: none;      
 }
 
 /* Button styling */
@@ -217,9 +212,9 @@ body {
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    width: 100%;             /* Full width inside the task box */
-    max-width: 200px;        /* Limit button width */
-    margin: 0 auto;          /* Center the button */
+    width: 100%;             
+    max-width: 200px;      
+    margin: 0 auto;         
 }
 
 .message-button:hover {

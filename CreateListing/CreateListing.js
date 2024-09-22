@@ -34,6 +34,5 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
         console.error('Error:', error);
     });
 
-    // Optionally, clear the form fields
     document.getElementById('listingForm').reset();
 });
