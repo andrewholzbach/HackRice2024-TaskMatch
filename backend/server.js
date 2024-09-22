@@ -1,5 +1,6 @@
 // backend/server.js
 const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -10,31 +11,43 @@ const port = 3001; // You can use any available port
 app.use(bodyParser.json()); // Parse JSON data from the client
 app.use(cors()); // Allow cross-origin requests from the front-end
 
-// Temporary storage for listings (In-memory, or connect to a database)
-let listings = [];
+// Connect to SQLite database
+const db = new sqlite3.Database('./listings.db', (err) => {
+    if (err) {
+        console.error('Error opening the database:', err.message);
+    } else {
+        console.log('Connected to the SQLite database.');
+        db.run(`
+            CREATE TABLE IF NOT EXISTS listings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            description TEXT,
+            price REAL,
+            tags TEXT
+            )
+        `);
+    }
+});2
 
 // Route to handle POST requests for creating a listing
 app.post('/create-listing', (req, res) => {
-    const { description, price, tags } = req.body;
-    if (!description || !price || !tags) {
-        return res.status(400).json({ message: 'All fields are required.' });
+    console.log("Listing created")
+    const { name, description, price, tags } = req.body;
+
+    if (!name || !description || !price || !tags) {
+        return res.status(400).json({ error: 'Please provide all fields.' });
     }
 
-    // Create a new listing object
-    const newListing = {
-        id: Date.now(), // Generate a unique ID
-        description,
-        price,
-        tags: tags.split(',').map(tag => tag.trim()) // Convert tags to an array
-    };
-
-    // Store listing (In a real app, this would be saved to a database)
-    listings.push(newListing);
-
-    console.log(`New listing with description: ${description}`)
-
-    // Send response back to the client
-    res.status(201).json({ message: 'Listing created successfully!', listing: newListing });
+    db.run(
+        `INSERT INTO listings (name, description, price, tags) VALUES (?, ?, ?, ?)`,
+        [name, description, price, tags],
+        function (err) {
+        if (err) {
+            return res.status(500).json({ error: 'Database error' });
+        }
+        res.status(201).json({ id: this.lastID });
+        }
+    );
 });
 
 // Start the server
@@ -43,7 +56,15 @@ app.listen(port, () => {
 });
 
 
-// Route to return all listings
+// GET: Fetch all listings
 app.get('/listings', (req, res) => {
-    res.json(listings); // Send the listings array as JSON
+    console.log(`Fetching listings`)
+    db.all('SELECT * FROM listings', [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        console.log(rows)
+        res.json(rows);
+    });
 });
+  

@@ -9,6 +9,7 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
 
     // Create a new listing object
     const listingData = {
+        name: "example",
         description: description,
         price: price,
         tags: tags
@@ -22,13 +23,12 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
         },
         body: JSON.stringify(listingData) // Convert the listing data to JSON
     })
-    .then(response => response.json())
+    .then(
+        response => response.json()
+    )
     .then(data => {
         // Display the created listing
-        document.getElementById('outputDescription').textContent = `Description: ${data.listing.description}`;
-        document.getElementById('outputPrice').textContent = `Price: $${data.listing.price}`;
-        document.getElementById('outputTags').textContent = `Tags: ${data.listing.tags.join(', ')}`;
-        document.getElementById('listingOutput').style.display = 'block';
+        console.log(data)
     })
     .catch(error => {
         console.error('Error:', error);

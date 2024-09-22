@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="Profile.css"> <!-- Linked the CSS file -->
+    <link rel="stylesheet" href="Profile.css"> 
 </head>
 <body>
+    <div class="header">
+        <link rel="stylesheet" href="Header.css">
+        <span class="app-name">Task Match</span>
+        <div class="header-links">
+            <a href="../Dashboard/Dashboard.html" class="header-link">Dashboard</a>
+            <a href="../CreateListing/CreateListing.html" class="header-link">Create a Task</a>
+            <a href="Messages.html" class="header-link">Messages</a>
+        </div>
+        <div class="profile-section">
+            <a href="../Profile/Profile.html" class="profile-circle"></a>
+            <span class="username">Your Name</span>
+        </div>
+    </div>
 
     <div class="profile-container">
         <div class="profile-picture"></div>
@@ -22,7 +35,15 @@
         <div class="completed-tasks">
             Number of completed tasks: <strong>3</strong>
         </div>
+
+
+        <div class="main-section" id="listings-container"></div>
+            
+        </div>
+
     </div>
+
+    <script src="Profile.js"></script>
 
 </body>
 </html>

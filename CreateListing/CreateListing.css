@@ -87,3 +87,141 @@ button:hover {
     margin: 5px 0;
     font-size: 16px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Fixed header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.header-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Profile circle */
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Content section (scrollable) */
+.content {
+    padding-top: 60px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Search section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdowns {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdowns select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Main section for tasks */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 100%; /* Ensure the main section takes full width */
+}
+
+/* Task input boxes */
+.task-box {
+    width: 100%;            /* Take full width of the parent */
+    max-width: 600px;        /* Limit maximum width for larger screens */
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+}
+
+.task-box input,
+.task-box textarea {
+    width: 100%;            /* Full width inside the task box */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+}
+
+.task-box textarea {
+    resize: none;            /* Prevents resizing */
+}
+
+/* Button styling */
+.message-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;             /* Full width inside the task box */
+    max-width: 200px;        /* Limit button width */
+    margin: 0 auto;          /* Center the button */
+}
+
+.message-button:hover {
+    background-color: #555;
+}
