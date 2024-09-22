@@ -1,7 +1,7 @@
+console.log("Dashboard script started")
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch the listings from the backend when the page loadsa
     fetch('http://localhost:3001/listings') 
-        
         .then(response => response.json())
         .then(listings => {
             const listingsContainer = document.getElementById('listings-container');
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Check if there are no listings
             if (listings.length === 0) {
+                console.log("Listings empty")
                 listingsContainer.innerHTML = '<p class="no-listings">No tasks found.</p>';
                 return;
             }
