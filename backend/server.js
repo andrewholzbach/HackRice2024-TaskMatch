@@ -28,18 +28,18 @@ const db = new sqlite3.Database('./listings.db', (err) => {
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `);
+        db.run(`
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                email TEXT UNIQUE,
+                password TEXT
+            )
+        `);
         
     }
 });
 
 
-   // db.run(`
-        //     CREATE TABLE IF NOT EXISTS users (
-        //         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        //         email TEXT UNIQUE,
-        //         password TEXT
-        //     )
-        // `);
 
 // Route to handle POST requests for creating a listing
 app.post('/create-listing', (req, res) => {
