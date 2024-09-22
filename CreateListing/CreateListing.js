@@ -3,6 +3,7 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent the form from refreshing the page
 
     // Get form values
+    const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
     const price = document.getElementById('price').value;
     const tags = document.getElementById('tags').value;
@@ -11,7 +12,7 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
     const listingData = {
         user: "example-user",
         description: description,
-        title: "example-title",
+        title: title,
         price: price,
         tags: tags
     };

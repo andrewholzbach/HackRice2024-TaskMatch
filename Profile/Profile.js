@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 taskBox.classList.add('task-box');
 
                 taskBox.innerHTML = `
-                    <input type="text" placeholder="Task Name" value="${listing.name}" readonly>
+                    <input type="text" placeholder="Task Name" value="${listing.title}" readonly>
                     <textarea rows="4" placeholder="Task Description" readonly>${listing.description}</textarea>
                     <button class="message-button">Message</button>
                 `;

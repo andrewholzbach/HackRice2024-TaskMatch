@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create the content for each task (name, description, and message button)
                 taskBox.innerHTML = `
-                    <input type="text" placeholder="Task Name" value="${listing.name}" readonly>
+                    <textarea rows="1" placeholder="Task Name" readonly>${listing.title}</textarea>
                     <textarea rows="4" placeholder="Task Description" readonly>${listing.description}</textarea>
+                    <textarea rows="1" placeholder="Price" readonly>Payment: $${listing.price}</textarea>
                     <button class="message-button">Message</button>
                 `;
 
