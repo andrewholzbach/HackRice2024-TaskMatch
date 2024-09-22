@@ -5,83 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Match Dashboard</title>
     <link rel="stylesheet" href="Dashboard.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #333;
-            padding: 10px 20px;
-            font-size: 22px;
-            color: white;
-        }
-        .app-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 30px;
-        }
-        .header-link {
-            margin-right: 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .header-link:hover {
-            text-decoration: underline;
-        }
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .search-section {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .search-bar {
-            width: 400px;
-            height: 40px;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        .dropdowns {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .dropdowns select {
-            margin-right: 10px;
-            padding: 8px;
-            font-size: 14px;
-        }
-        .main-section {
-            display: flex;
-            justify-content: center;
-            margin: 20px;
-        }
-        .large-box {
-            width: 45%;
-            height: 300px;
-            background-color: #e0e0e0;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .username {
-            color: white;
-            margin-top: 5px;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="header">
@@ -115,15 +39,22 @@
             </select>
         </div>
 
-        <!-- Task input section -->
         <div class="main-section" id="listings-container">
-            <div class="task-box">
-                <textarea rows="1" placeholder="Task Name"></textarea>
-                <textarea rows="4" placeholder="Task Description"></textarea>
-                <textarea rows="1" placeholder="Price"></textarea>
-                <button class="message-button">Message</button>
-            </div>
+    <div class="task-box">
+        <!-- Left side with circle image and name -->
+        <div class="left-section">
+            <div class="circle-image"></div>
+            <p class="name">Name</p>
         </div>
+
+        <!-- Right side with three text areas -->
+        <div class="right-section">
+            <textarea rows="1" placeholder="Task Name"></textarea>
+            <textarea rows="4" placeholder="Task Description"></textarea>
+            <textarea rows="1" placeholder="Price"></textarea>
+        </div>
+    </div>
+</div>
 
     </div>
     

@@ -20,10 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 taskBox.innerHTML = `
                     <input type="text" placeholder="Task Name" value="${listing.title}" readonly>
                     <textarea rows="4" placeholder="Task Description" readonly>${listing.description}</textarea>
-                    <button class="message-button">Message</button>
+                    <textarea rows="1" placeholder="Price" readonly>Payment: $${listing.price}</textarea>
+                    
                 `;
 
-                listingsContainer.appendChild(taskBox);
+                // Insert the new task at the top of the container
+                if (listingsContainer.firstChild) {
+                    listingsContainer.insertBefore(taskBox, listingsContainer.firstChild);
+                } else {
+                    listingsContainer.appendChild(taskBox);
+                }
             });
         })
         .catch(error => {
@@ -87,12 +93,12 @@ document.getElementById('create-account-button').addEventListener('click', funct
 // Onload for username
 window.onload = function() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    const usernameElement = document.querySelector('.username'); // Select the element to display the username
+    const usernameElement = document.querySelector('.username'); 
 
     if (isLoggedIn) {
         const email = localStorage.getItem('userEmail');
-        usernameElement.textContent = email; // Set the profile display to the user's email
+        usernameElement.textContent = email; 
     } else {
-        usernameElement.textContent = 'Guest'; // Default display if not logged in
+        usernameElement.textContent = 'Guest'; 
     }
 };

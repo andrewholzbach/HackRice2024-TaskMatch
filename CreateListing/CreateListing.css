@@ -58,7 +58,7 @@ input[type="text"], input[type="number"], textarea {
 
 button {
     padding: 10px 15px;
-    background-color: #28a745;
+    background-color: #00008b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -174,7 +174,6 @@ body {
     width: 100%;
 }
 
-/* Task input boxes */
 .task-box {
     width: 100%;            
     max-width: 600px;        
@@ -202,7 +201,6 @@ body {
     resize: none;      
 }
 
-/* Button styling */
 .message-button {
     background-color: #333;
     color: white;

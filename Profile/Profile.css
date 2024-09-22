@@ -6,23 +6,33 @@ body {
     background-color: #f9f9f9;
 }
 
+
+
 .profile-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px; 
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-
 .profile-picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: #e0e0e0;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .upload-section {
@@ -31,7 +41,7 @@ body {
 }
 
 .upload-section button {
-    background-color: #333;
+    background-color: #00008b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -57,6 +67,7 @@ body {
     font-size: 18px;
     text-align: center;
 }
+
 
 .task-box {
     width: 100%;            
@@ -129,6 +140,9 @@ body {
 }
 .main-section {
     display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 25px;
     justify-content: center;
     margin: 20px;
 }
@@ -156,22 +170,22 @@ body {
 
 .action-buttons {
     display: flex;
-    justify-content: center; /* Center the buttons */
-    margin-top: 15px; /* Add space above the buttons */
-    gap: 10px; /* Space between buttons */
+    justify-content: center; 
+    margin-top: 15px; 
+    gap: 10px;
 }
 
 .action-buttons button {
-    padding: 10px 15px; /* Padding for better size */
-    background-color: #4CAF50; /* Green background */
+    padding: 10px 15px;
+    background-color: #00008b; 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Font size */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 16px; 
+    transition: background-color 0.3s;
 }
 
 .action-buttons button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #00008b; 
 }

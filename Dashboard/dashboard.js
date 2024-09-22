@@ -28,8 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button class="message-button">Message</button>
                 `;
 
-                // Append each task to the container
-                listingsContainer.appendChild(taskBox);
+                // Insert the new task at the top of the container
+                if (listingsContainer.firstChild) {
+                    listingsContainer.insertBefore(taskBox, listingsContainer.firstChild);
+                } else {
+                    listingsContainer.appendChild(taskBox);
+                }
             });
         })
         .catch(error => {

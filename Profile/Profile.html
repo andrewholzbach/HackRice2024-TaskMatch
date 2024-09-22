@@ -9,7 +9,7 @@
 <body>
     <div class="header">
         <link rel="stylesheet" href="Header.css">
-        <span class="app-name">Task Match</span>
+        <span class="app-name">TaskMatch</span>
         <div class="header-links">
             <a href="../Dashboard/Dashboard.html" class="header-link">Dashboard</a>
             <a href="../CreateListing/CreateListing.html" class="header-link">Create a Task</a>
@@ -22,7 +22,9 @@
     </div>
 
     <div class="profile-container">
-        <div class="profile-picture"></div>
+        <div class="profile-picture">
+            <img id="profileImage" src="Rice-Owls-Logo.jpg" alt="Profile Picture">
+        </div>
         <div class="upload-section">
             <button>Upload Picture</button>
         </div>
@@ -37,11 +39,21 @@
             <button class="login-button" id="login-button">Login</button>
         </div>
 
+
         <div class="completed-tasks">
-            Number of completed tasks: <strong>3</strong>
+            Your number of completed tasks: <strong>3</strong>
+            <p>Your Posted Tasks: </p>
         </div>
 
-        <div class="main-section" id="listings-container"></div>
+        <div class="main-section" id="listings-container">
+            <div class="task-box">
+                <textarea rows="1" placeholder="Task Name"></textarea>
+                <textarea rows="4" placeholder="Task Description"></textarea>
+                <textarea rows="1" placeholder="Price"></textarea>
+                
+            </div>
+        </div>
+
     </div>
 
     <script src="Profile.js"></script>
