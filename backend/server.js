@@ -46,7 +46,7 @@ app.post('/create-listing', (req, res) => {
     console.log("Listing created")
     const { user, description, title, price, tags } = req.body;
 
-    if (!user || !description || !price || !tags) {
+    if (!user || !title || !description || !price || !tags) {
         return res.status(400).json({ error: 'Please provide all fields.' });
     }
 
